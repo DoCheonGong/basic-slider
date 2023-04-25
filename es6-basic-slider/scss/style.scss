@@ -1,0 +1,58 @@
+@charset "UTF-8";
+@import "reset";
+
+#slider {
+    width: 400px;
+    height: 250px;
+    border: 5px solid #000;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+    .panel {
+        width: 500%;
+        height: 100%;
+        margin-left: 0px;
+        transition: 0.5s;
+        // 이동하는 방법
+        li {
+            width: 20%;
+            height: 100%;
+            float: left;
+            &:nth-of-type(1) {
+                background-color: aqua;
+            }
+            &:nth-of-type(2) {
+                background-color: pink;
+            }
+            &:nth-of-type(3) {
+                background-color: orange;
+            }
+            &:nth-of-type(4) {
+                background-color: violet;
+            }
+            &:nth-of-type(5) {
+                background-color: lightgreen;
+            }
+        }
+    }
+    .btns {
+        position: absolute;
+        bottom: 15px;
+        left: 50px;
+        li {
+            float: left;
+            margin-right: 20px;
+            a {
+                display: block;
+                width: 20px;
+                height: 20px;
+                background-color: #fff;
+            }
+            &.on {
+                a {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+}
